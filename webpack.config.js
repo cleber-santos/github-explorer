@@ -3,6 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin') // Plugin do webpack pa
 
 module.exports = {
   mode: 'development',
+
+  // configurar o source maps
+  devtool: 'eval-source-map',
+
   // o entry mostra o arquivo de entrada e o output mostra o arquivo de saida depois da conversão.
   // __dirname ele vai pegar o diretorio. E o path.resolve vai colocar a "/" correta conforme S.O.
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
