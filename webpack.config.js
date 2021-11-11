@@ -50,9 +50,9 @@ module.exports = {
       },
       // o style-loader e o css-loader faz a integração dos estilos
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'] // yarn add style-loader css-loader -D
+        use: ['style-loader', 'css-loader', 'sass-loader'] // yarn add style-loader css-loader -D
       }
     ]
   }
