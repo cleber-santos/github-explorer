@@ -40,13 +40,19 @@ module.exports = {
 
   // O module vai ficar as configurações de como nossa aplicação vai se comportar para cada importação dependendo do tipo de arquivo.
   // rule: quando exportar qualquer arquivo terminado em .jsx (\.jsx$) da pasta node_modules não fazer a conversão e deixar que o babel-loader faça isso.
-  // o babel-loader e a integração do webpack com o babel.
+  // o babel-loader faz a integração do webpack com o babel.
   module: {
     rules: [
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
         use: 'babel-loader' // > yarn add babel-loader -D
+      },
+      // o style-loader e o css-loader faz a integração dos estilos
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader'] // yarn add style-loader css-loader -D
       }
     ]
   }
