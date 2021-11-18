@@ -1,5 +1,6 @@
 const path = require('path') // o path evita erros em caminhos com " / "
 const HtmlWebpackPlugin = require('html-webpack-plugin') // Plugin do webpack para gerenciar o arquivo de build
+const ReactRefleshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin') // Plugin para ao fazer reflesh da pagina não zerar ela.
 
 // const para criar o ambiente dev e produção
 const isDevelopment = process.env.NODE_ENV !== 'production'
@@ -28,15 +29,17 @@ module.exports = {
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'public')
-    }
+    },
+    hot: true
   },
 
   // plugins para gerenciamento
   plugins: [
+    isDevelopment && new ReactRefleshWebpackPlugin(), // adicionar o fastReflesh quando estiver em modo development
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
     })
-  ],
+  ].filter(Boolean), // .filter(Boolean), para não dar erro quando uma condição for false.
 
   // O module vai ficar as configurações de como nossa aplicação vai se comportar para cada importação dependendo do tipo de arquivo.
   // rule: quando exportar qualquer arquivo terminado em .jsx (\.jsx$) da pasta node_modules não fazer a conversão e deixar que o babel-loader faça isso.
@@ -46,7 +49,16 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
-        use: 'babel-loader' // > yarn add babel-loader -D
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              plugins: [
+                isDevelopment && require.resolve('react-refresh/babel')
+              ].filter(Boolean)
+            }
+          }
+        ]
       },
       // o style-loader e o css-loader faz a integração dos estilos
       {
