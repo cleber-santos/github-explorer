@@ -14,7 +14,7 @@ module.exports = {
 
   // o entry mostra o arquivo de entrada e o output mostra o arquivo de saida depois da conversão.
   // __dirname ele vai pegar o diretorio. E o path.resolve vai colocar a "/" correta conforme S.O.
-  entry: path.resolve(__dirname, 'src', 'index.jsx'),
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -22,7 +22,7 @@ module.exports = {
 
   // resolve > extensions vai dizer qual extensões o webpack aceita.
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
 
   // Webpack dev server - automatizar o webpack para gerar o bundle.js, para cada alteração de uma pasta especifica.
@@ -47,7 +47,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.(j|t)sx$/, // especificamos que os arquivos podem ser \.jsx OU \.tsx -> (j|t)
         exclude: /node_modules/,
         use: [
           {
