@@ -20,10 +20,11 @@
 
 <p align="center">
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-O que foi aprendido">O que foi aprendido</a> &#xa0; | &#xa0;
+  <a href="#sparkles-o-que-foi-aprendido">O que foi aprendido</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-pré-requesitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
+  <a href="#film_strip-demonstração">Demo</a> &#xa0; | &#xa0;
   <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
   <a href="https://github.com/cleber-santos" target="_blank">Autor</a>
 </p>
@@ -44,11 +45,12 @@ Primeiro projeto criado no Ignite trilha ReactJS. Onde criamos uma lista de repo
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
+- [Webpack](https://webpack.js.org/)
+- [Sass](https://sass-lang.com/)
+- [Babel](https://babeljs.io/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [React Dev Tools](https://pt-br.reactjs.org/blog/2015/09/02/new-react-developer-tools.html)
 
 ## :white_check_mark: Pré requisitos
 
@@ -67,10 +69,14 @@ $ cd github-explorer
 $ yarn
 
 # Para iniciar o projeto
-$ yarn start
+$ yarn dev
 
-# O app vai inicializar em <http://localhost:3000>
+# O app vai inicializar em <http://localhost:8080>
 ```
+
+## :film_strip: Demonstração
+
+![gif](https://github.com/cleber-santos/)
 
 ## :memo: Licença
 
