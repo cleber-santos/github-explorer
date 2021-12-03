@@ -6,6 +6,7 @@
 </div>
 
 <h1 align="center">Ignite Chapter 1 - ReactJS</h1>
+<h2 align="center">Github Explorer</h2>
 
 <p align="center">
   <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/cleber-santos/github-explorer?color=#1C2A24">
@@ -33,13 +34,20 @@
 
 ## :dart: Sobre
 
-Primeiro projeto criado no Ignite trilha ReactJS. Onde criamos uma lista de repositorios da rocketseat, consumindo uma API do github.
+Primeiro projeto criado no Ignite - trilha ReactJS.
+Onde criamos uma lista de repositorios da rocketseat, consumindo uma API do github. Projeto simples onde foi ensinado os primeiros fundamentos e toda a estrutura de uma aplicação React.
 
 ## :sparkles: O que foi aprendido
 
-:heavy_check_mark: Funcionalidade 1;\
-:heavy_check_mark: Funcionalidade 2;\
-:heavy_check_mark: Funcionalidade 3;
+- [x] Webpack Dev Server;
+- [x] Ambiente de desenvolvimento e ambiente de produção;
+- [x] Importação de arquivos css e sass;
+- [x] Criação de componentes;
+- [x] Conceito de imutabilidade;
+- [x] Como funciona os "hooks", useState e useEffect;
+- [x] Como configurar e utilizar o TypeScript;
+- [x] Aplicação da tipagem na aplicação;
+- [x] Utilização do React Developer Tools.
 
 ## :rocket: Tecnologias
 
@@ -51,10 +59,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Babel](https://babeljs.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Dev Tools](https://pt-br.reactjs.org/blog/2015/09/02/new-react-developer-tools.html)
-
-## :white_check_mark: Pré requisitos
-
-Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
 
 ## :checkered_flag: Começando
 
@@ -76,7 +80,7 @@ $ yarn dev
 
 ## :film_strip: Demonstração
 
-![gif](https://github.com/cleber-santos/)
+![print](./public/assets/github_explorer.png)
 
 ## :memo: Licença
 
